@@ -31,7 +31,7 @@ cacheSolve <- function(x, ...) {
                 return(inv)
         }
         data <- x$get() # return the matrix
-        inv <- solve(data) #return Inverse of A where A is a square matrix.
+        inv <- solve(data,...) #return Inverse of A where A is a square matrix.
         x$setinverse(inv) #set the inverse of matrix to calculate inverse
         inv # return the matrix inverse
 }
